@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE2645A1-751C-46D8-8FD9-C5DD7F7B9417}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Open_Prototype</RootNamespace>
+    <AssemblyName>Open_Prototype</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA, Version=2.5.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation, Version=1.1.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="獎狀系統V1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="獎狀系統V1.Designer.cs">
+      <DependentUpon>獎狀系統V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="獎狀系統V2_學生獎狀.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="獎狀系統V2_學生獎狀.Designer.cs">
+      <DependentUpon>獎狀系統V2_學生獎狀.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="獎狀系統V2_班級獎狀.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="獎狀系統V2_班級獎狀.Designer.cs">
+      <DependentUpon>獎狀系統V2_班級獎狀.cs</DependentUpon>
+    </Compile>
+    <Compile Include="獎狀系統V2名次設定.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="獎狀系統V2名次設定.Designer.cs">
+      <DependentUpon>獎狀系統V2名次設定.cs</DependentUpon>
+    </Compile>
+    <Compile Include="獎狀系統V2新增樣板.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="獎狀系統V2新增樣板.Designer.cs">
+      <DependentUpon>獎狀系統V2新增樣板.cs</DependentUpon>
+    </Compile>
+    <Compile Include="請假系統設定畫面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="請假系統設定畫面.Designer.cs">
+      <DependentUpon>請假系統設定畫面.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\DevComponents.DotNetBar2.dll" />
+    <Content Include="Library\FISCA.dll" />
+    <Content Include="Library\FISCA.Presentation.dll" />
+    <Content Include="Library\FISCA.Presentation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="獎狀系統V1.resx">
+      <DependentUpon>獎狀系統V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="獎狀系統V2_學生獎狀.resx">
+      <DependentUpon>獎狀系統V2_學生獎狀.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="獎狀系統V2_班級獎狀.resx">
+      <DependentUpon>獎狀系統V2_班級獎狀.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="獎狀系統V2名次設定.resx">
+      <DependentUpon>獎狀系統V2名次設定.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="獎狀系統V2新增樣板.resx">
+      <DependentUpon>獎狀系統V2新增樣板.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="請假系統設定畫面.resx">
+      <DependentUpon>請假系統設定畫面.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
